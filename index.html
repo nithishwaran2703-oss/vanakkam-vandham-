@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>வணக்கம் வந்தனம் | Premium Event Artistry</title>
+    <meta name="description" content="Luxury wedding stages, bespoke birthday wonderlands, and majestic traditional events.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Premium Loader -->
+    <div class="loader">
+        <div class="loader-text font-serif">
+            <span>வணக்கம்</span> <span class="text-gold">வந்தனம்</span>
+        </div>
+        <div class="loader-progress"></div>
+    </div>
+
+    <!-- Canvas for Particle Animation -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">வணக்கம் <span class="accent">வந்தனம்</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="magnetic" data-strength="20">About</a></li>
+            <li><a href="#gallery" class="magnetic" data-strength="20">Gallery</a></li>
+            <li><a href="#services" class="magnetic" data-strength="20">Expertise</a></li>
+            <li><a href="#why-us" class="magnetic" data-strength="20">Why Us</a></li>
+        </ul>
+        <a href="https://wa.me/919788742627" target="_blank" class="btn-primary magnetic" data-strength="40">Consult Expert</a>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg-wrapper">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80" alt="Royal Wedding" class="bg-img" />
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="badge reveal-text">South Indian Grandeur</div>
+            <h1 class="hero-title">
+                <div class="line-mask"><div class="line-content">CELEBRATE <span class="italic-serif text-gold">with</span></div></div>
+                <div class="line-mask"><div class="line-content">TIMELESS</div></div>
+                <div class="line-mask"><div class="line-content">ELEGANCE</div></div>
+            </h1>
+            <p class="hero-subtitle reveal-text delay-1">From majestic traditional mandaps to breathtaking modern celebrations. We craft the perfect aesthetic for your most cherished moments.</p>
+            <div class="hero-actions reveal-text delay-2">
+                <a href="#gallery" class="btn-primary glow-effect magnetic" data-strength="40">Explore Designs</a>
+                <button class="btn-secondary play-btn magnetic" data-strength="30" id="openStylist">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg> 
+                    AI Stylist
+                </button>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </header>
+
+    <div class="marquee-section relative-z">
+        <div class="marquee-content font-serif">
+            <span>&nbsp;• VANAKAM VANDHANAM • EVENT ARTISTRY • LUXURY DESIGN</span>
+            <span>&nbsp;• VANAKAM VANDHANAM • EVENT ARTISTRY • LUXURY DESIGN</span>
+            <span>&nbsp;• VANAKAM VANDHANAM • EVENT ARTISTRY • LUXURY DESIGN</span>
+        </div>
+    </div>
+
+    <section id="about" class="about-section relative-z">
+        <div class="about-container reveal-on-scroll">
+            <div class="about-image tilt-card">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/736x/23/88/a0/2388a0e1a766fc9da53acd8bf832c388.jpg" alt="About Us Decor" class="parallax-img" loading="lazy">
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">Crafting <span class="italic-serif text-maroon">Timeless</span> Memories</h2>
+                <p class="section-subtitle">At Vanakam Vandhanam, we believe every celebration is a story waiting to be told. With years of experience in luxury event styling, we transform ordinary spaces into breathtaking realms of beauty.</p>
+                <p class="section-subtitle">Our dedicated team specializes in everything from majestic traditional South Indian weddings to whimsical, modern birthday wonderlands. We don't just decorate; we create atmospheres that resonate with your soul.</p>
+                <a href="#gallery" class="btn-primary magnetic glow-effect mt-4" data-strength="30">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="stats-section parallax-section relative-z">
+        <div class="stats-container reveal-on-scroll">
+            <div class="stat-item magnetic" data-strength="15">
+                <h3 class="counter" data-target="500">0</h3>
+                <p>Events Perfected</p>
+            </div>
+            <div class="stat-item magnetic" data-strength="15">
+                <h3 class="counter" data-target="15">0</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item magnetic" data-strength="15">
+                <h3 class="counter" data-target="100">0</h3><span>%</span>
+                <p>Client Joy</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-cards-section relative-z">
+        <div class="section-header text-center reveal-on-scroll">
+            <h2 class="section-title">Our Design <span class="italic-serif">Collections</span></h2>
+            <p class="section-subtitle mx-auto">Browse through our curated selection of premium decoration services and find the perfect inspiration.</p>
+        </div>
+        <div class="service-cards-grid">
+            <div class="service-category-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="scc-image"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80" alt="Wedding" loading="lazy"></div>
+                <div class="scc-body">
+                    <h3>Wedding Decorations</h3>
+                    <p>Breathtaking mandaps and stage setups that blend tradition with grandeur.</p>
+                    <div class="scc-tags"><span class="tag-grand">Grand</span><span class="tag-premium">Premium</span><span class="tag-elite">Elite</span></div>
+                    <div class="scc-sub-list">
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/9b/7a/ea/9b7aea6560d9325ed6e696d8e1e10dcf.jpg" alt="Mandap"><div><strong>Royal Mandap Design</strong><small>Traditional pillar mandaps with heavy floral draping.</small></div></div>
+                        <div class="scc-sub"><img src="https://i.pinimg.com/1200x/1d/fe/da/1dfedaee26b6a9a0d1ec2b29b627ae44.jpg" alt="Aisle"><div><strong>Floral Aisle Path</strong><small>Stunning walkway lined with fresh petals and lanterns.</small></div></div>
+                        <div class="scc-sub"><img src="https://i.pinimg.com/1200x/dc/e3/47/dce34792339973fa7ed800ffd1f96d39.jpg" alt="Reception"><div><strong>Elite Reception Backdrop</strong><small>Modern LED and fabric mix for the perfect reception stage.</small></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-category-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="scc-image"><img src="https://i.pinimg.com/736x/3f/76/54/3f76541ce9e3511547d0d53820e95a29.jpg" alt="Birthday" loading="lazy"></div>
+                <div class="scc-body">
+                    <h3>Birthday Decorations</h3>
+                    <p>Magical themes and balloon wonderlands for every milestone.</p>
+                    <div class="scc-tags"><span class="tag-elite">Elite</span><span class="tag-grand">Grand</span><span class="tag-premium">Premium</span></div>
+                    <div class="scc-sub-list">
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/3c/f9/c3/3cf9c3f1b8c4dc9c835dff2a2242d3f7.jpg" alt="Jungle"><div><strong>Jungle Safari Theme</strong><small>Life-size animal cutouts and lush greenery.</small></div></div>
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/00/5c/a0/005ca0f451bf7a0e69900b59e8b0144a.jpg" alt="Princess"><div><strong>Princess Castle Setup</strong><small>Elegant pink and gold castle backdrop with cloud balloons.</small></div></div>
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/6b/88/52/6b8852faf748a3f38fccddf64e844e77.jpg" alt="Boho"><div><strong>Minimalist Boho Birthday</strong><small>Pampas grass and subtle balloon arches for adults.</small></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-category-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="scc-image"><img src="https://i.pinimg.com/736x/f3/3a/27/f33a2789f890f64fefa26f939544d1da.jpg" alt="Balloon" loading="lazy"></div>
+                <div class="scc-body">
+                    <h3>Balloon Artistry</h3>
+                    <p>Creative structures and organic garlands for dynamic visual impact.</p>
+                    <div class="scc-tags"><span class="tag-premium">Premium</span><span class="tag-elite">Elite</span></div>
+                    <div class="scc-sub-list">
+                        <div class="scc-sub"><img src="https://i.pinimg.com/1200x/08/5d/53/085d53db0a7ee93156c02a10f5bb4dc2.jpg" alt="Garland"><div><strong>Organic Garland Arch</strong><small>Irregular sized balloons with floral inserts.</small></div></div>
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/41/f9/ff/41f9ff229f6e400923f67d310eff3a6c.jpg" alt="Tunnel"><div><strong>Entrance Balloon Tunnel</strong><small>A grand walkthrough for your guests.</small></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-category-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="scc-image"><img src="https://i.pinimg.com/736x/31/d2/8d/31d28d576405355ba0bcc96b657f7ef4.jpg" alt="Festival" loading="lazy"></div>
+                <div class="scc-body">
+                    <h3>Festival & Traditional</h3>
+                    <p>Vibrant Diwali, Pongal, and home transformation setups.</p>
+                    <div class="scc-tags"><span class="tag-premium">Premium</span><span class="tag-grand">Grand</span></div>
+                    <div class="scc-sub-list">
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/bb/0a/9b/bb0a9bc062b25251eafe4dc79cf9dd26.jpg" alt="Marigold"><div><strong>Traditional Marigold Draping</strong><small>Classic South Indian vibe with real marigolds.</small></div></div>
+                        <div class="scc-sub"><img src="https://i.pinimg.com/736x/d2/45/3d/d2453da4c2f91b535a3eda56c1f8b3c0.jpg" alt="Temple"><div><strong>Temple Theme Stage</strong><small>Intricate wood and floral work resembling a temple.</small></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section relative-z">
+        <div class="section-header text-center reveal-on-scroll">
+            <h2 class="section-title">Masterpiece <span class="italic-serif">Collections</span></h2>
+            <p class="section-subtitle mx-auto">Filter through our breathtaking setups to find your inspiration.</p>
+            
+            <div class="filter-btns">
+                <button class="filter-btn active magnetic" data-filter="all" data-strength="10">All</button>
+                <button class="filter-btn magnetic" data-filter="wedding" data-strength="10">Weddings</button>
+                <button class="filter-btn magnetic" data-filter="birthday" data-strength="10">Birthdays</button>
+                <button class="filter-btn magnetic" data-filter="festival" data-strength="10">Traditional</button>
+            </div>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-card reveal-on-scroll tilt-card" data-category="wedding">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/736x/9b/7a/ea/9b7aea6560d9325ed6e696d8e1e10dcf.jpg" alt="Royal Mandap" class="parallax-img" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Royal Floral Mandap</h3>
+                        <p>Traditional pillar mandaps with heavy floral draping.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card reveal-on-scroll tilt-card" data-category="birthday">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/736x/3f/76/54/3f76541ce9e3511547d0d53820e95a29.jpg" alt="Birthday" class="parallax-img" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Magical Themes</h3>
+                        <p>Balloon artistry and bespoke backdrops for milestones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card reveal-on-scroll tilt-card" data-category="festival">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/736x/31/d2/8d/31d28d576405355ba0bcc96b657f7ef4.jpg" alt="Traditional" class="parallax-img" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Festive Grandeur</h3>
+                        <p>Vibrant home transformations for cultural festivals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card reveal-on-scroll tilt-card" data-category="wedding">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/1200x/1d/fe/da/1dfedaee26b6a9a0d1ec2b29b627ae44.jpg" alt="Aisle Path" class="parallax-img" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Floral Aisle Walkway</h3>
+                        <p>Stunning paths lined with fresh petals and lanterns.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-card reveal-on-scroll tilt-card" data-category="festival">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/736x/bb/0a/9b/bb0a9bc062b25251eafe4dc79cf9dd26.jpg" alt="Marigold" class="parallax-img" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Classic Marigold</h3>
+                        <p>Authentic South Indian vibes with real marigolds.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-card reveal-on-scroll tilt-card" data-category="birthday">
+                <div class="card-inner">
+                    <img src="https://i.pinimg.com/736x/3c/f9/c3/3cf9c3f1b8c4dc9c835dff2a2242d3f7.jpg" alt="Jungle" class="parallax-img" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Jungle Safari</h3>
+                        <p>Life-size cutouts and lush greenery for kids.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-vision-box reveal-on-scroll">
+            <h3 class="font-serif">Have a Custom Vision?</h3>
+            <p>Our design gallery is just the beginning. We specialize in bringing unique, never-seen-before concepts to life. Let's sketch your dream together.</p>
+            <a href="https://wa.me/919788742627" target="_blank" class="btn-primary magnetic" data-strength="20">Collaborate with Stylist</a>
+        </div>
+    </section>
+
+    <section class="video-showcase relative-z">
+        <div class="section-header text-center reveal-on-scroll">
+            <h2 class="section-title">Cinematic <span class="italic-serif">Highlights</span></h2>
+            <p class="section-subtitle mx-auto">Watch our recent event transformations come alive.</p>
+        </div>
+        <div class="video-grid">
+            <div class="video-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="video-thumb">
+                    <img src="https://i.pinimg.com/736x/ba/70/53/ba7053030e83533946c8aeefe477b8d2.jpg" alt="Wedding Reel" loading="lazy">
+                    <div class="play-overlay"><div class="play-circle">▶</div></div>
+                    <span class="video-badge">Wedding</span>
+                </div>
+                <h4>Cinematic Entrance Highlights</h4>
+            </div>
+            <div class="video-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="video-thumb">
+                    <img src="https://i.pinimg.com/1200x/39/ad/ab/39adab1a89ec9cdb19a1d0cd54c9de56.jpg" alt="Birthday Reel" loading="lazy">
+                    <div class="play-overlay"><div class="play-circle">▶</div></div>
+                    <span class="video-badge">Birthday</span>
+                </div>
+                <h4>Neon Balloon Party Tour</h4>
+            </div>
+            <div class="video-card reveal-on-scroll magnetic" data-strength="5">
+                <div class="video-thumb">
+                    <img src="https://i.pinimg.com/736x/f2/57/23/f257237cd5f6fd6dddf9c03b78b082d1.jpg" alt="Traditional" loading="lazy">
+                    <div class="play-overlay"><div class="play-circle">▶</div></div>
+                    <span class="video-badge">Traditional</span>
+                </div>
+                <h4>Traditional Petal Ceremony</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section relative-z">
+        <div class="services-container">
+            <div class="services-text reveal-on-scroll">
+                <h2 class="section-title">Our <span class="italic-serif text-maroon">Expertise</span></h2>
+                <p class="section-subtitle">Meticulous planning combined with flawless execution. We handle every petal, every light, and every detail.</p>
+            </div>
+            <div class="services-accordion reveal-on-scroll">
+                <div class="accordion-item active magnetic" data-strength="5">
+                    <div class="accordion-header">
+                        <h3>01. Event Design & Styling</h3>
+                        <div class="icon-wrapper"><span class="icon">+</span></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We craft bespoke themes. From hand-picked floral selections to custom-built stage architectures, our design team ensures your event looks uniquely yours.</p>
+                    </div>
+                </div>
+                <div class="accordion-item magnetic" data-strength="5">
+                    <div class="accordion-header">
+                        <h3>02. Venue Transformation</h3>
+                        <div class="icon-wrapper"><span class="icon">+</span></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We turn empty halls into majestic palaces. Utilizing advanced draping, intelligent lighting, and structural artistry.</p>
+                    </div>
+                </div>
+                <div class="accordion-item magnetic" data-strength="5">
+                    <div class="accordion-header">
+                        <h3>03. Immersive Balloon Artistry</h3>
+                        <div class="icon-wrapper"><span class="icon">+</span></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Organic balloon garlands, massive entrance tunnels, and whimsical setups perfect for birthdays and casual celebrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section relative-z">
+        <div class="section-header text-center reveal-on-scroll">
+            <h2 class="section-title">How The <span class="italic-serif">Magic</span> Happens</h2>
+            <p class="section-subtitle mx-auto">Our seamless 4-step process ensures your event is flawless from concept to execution.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step reveal-on-scroll magnetic" data-strength="8">
+                <div class="step-number">01</div>
+                <h3>Consultation</h3>
+                <p>We listen to your vision, understand your cultural preferences, budget, and style.</p>
+            </div>
+            <div class="process-step reveal-on-scroll magnetic" data-strength="8">
+                <div class="step-number">02</div>
+                <h3>Design & Concept</h3>
+                <p>Our stylists create mood boards and 3D renders of your bespoke decoration plan.</p>
+            </div>
+            <div class="process-step reveal-on-scroll magnetic" data-strength="8">
+                <div class="step-number">03</div>
+                <h3>Crafting & Setup</h3>
+                <p>Our team arrives early and transforms your venue into a breathtaking masterpiece.</p>
+            </div>
+            <div class="process-step reveal-on-scroll magnetic" data-strength="8">
+                <div class="step-number">04</div>
+                <h3>Grand Reveal</h3>
+                <p>You walk in to perfection. We handle teardown so you focus on celebrating.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section relative-z">
+        <div class="section-header text-center reveal-on-scroll">
+            <h2 class="section-title">Words From <span class="italic-serif">Happy Hearts</span></h2>
+            <p class="section-subtitle mx-auto">Real stories from families who trusted us with their most precious moments.</p>
+        </div>
+        <div class="testimonials-track" id="testimonialTrack">
+            <div class="testimonial-card reveal-on-scroll">
+                <div class="stars">★★★★★</div>
+                <p>"The mandap was beyond our dreams. Every guest was in awe. Vanakam Vandhanam turned our wedding into a fairy tale."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">P</div>
+                    <div><strong>Priya & Karthik</strong><span>Wedding — Chennai</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal-on-scroll">
+                <div class="stars">★★★★★</div>
+                <p>"My daughter's Jungle Safari birthday was magical! The life-size cutouts and balloon tunnel left the kids speechless."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">S</div>
+                    <div><strong>Sanjay Ramanathan</strong><span>Birthday — Coimbatore</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal-on-scroll">
+                <div class="stars">★★★★★</div>
+                <p>"They transformed our home for Diwali like never before. The marigold draping and brass diyas were absolutely stunning."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div><strong>Meena Sundaram</strong><span>Festival — Madurai</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section relative-z">
+        <div class="faq-container">
+            <div class="faq-left reveal-on-scroll">
+                <h2 class="section-title">Frequently <span class="italic-serif text-maroon">Asked</span></h2>
+                <p class="section-subtitle">Everything you need to know before booking your dream event decoration.</p>
+                <a href="https://wa.me/919788742627" target="_blank" class="btn-primary magnetic" data-strength="20">Still Have Questions?</a>
+            </div>
+            <div class="faq-right reveal-on-scroll">
+                <div class="faq-item">
+                    <div class="faq-header"><h3>How far in advance should I book?</h3><span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>We recommend booking at least 2–4 weeks in advance for birthdays and 1–3 months for weddings to ensure availability and allow time for custom design work.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header"><h3>Do you provide floral and balloon services?</h3><span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Yes! We offer fresh floral arrangements, artificial flower setups, organic balloon garlands, entrance arches, and full venue transformation packages.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header"><h3>What areas do you serve?</h3><span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>We primarily serve Tamil Nadu — Chennai, Coimbatore, Madurai, Trichy, and surrounding areas. We also take destination event bookings across South India.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header"><h3>Can I customize the decoration theme?</h3><span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Absolutely! Every event is fully bespoke. Share your Pinterest boards, color palettes, or just describe your dream — we'll bring it to life.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section relative-z">
+        <div class="cta-container reveal-on-scroll">
+            <div class="cta-bg-text font-serif">DECOR</div>
+            <div class="cta-content">
+                <h2 class="cta-title">Plan Your <span class="italic-serif text-gold">Dream</span> Event</h2>
+                <p class="cta-subtitle">From majestic mandaps to whimsical birthdays, we bring your imagination to life.</p>
+                <a href="https://wa.me/919788742627" target="_blank" class="btn-primary btn-large magnetic glow-effect" data-strength="40">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="margin-right: 10px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Request Custom Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer relative-z">
+        <div class="footer-bg-animation"></div>
+        <div class="footer-top">
+            <div class="footer-brand reveal-on-scroll">
+                <h2 class="font-serif">வணக்கம் <span class="text-gold">வந்தனம்</span></h2>
+                <p>Crafting memories that last a lifetime with the rich heritage and modern luxury of event design.</p>
+            </div>
+            <div class="footer-links reveal-on-scroll">
+                <h3>Quick Links</h3>
+                <a href="#gallery" class="magnetic" data-strength="10">Gallery</a>
+                <a href="#services" class="magnetic" data-strength="10">Services</a>
+                <a href="#" class="magnetic" data-strength="10">Contact Us</a>
+            </div>
+            <div class="footer-contact reveal-on-scroll">
+                <h3>Connect</h3>
+                <p>Email: hello@vanakamvandhanam.com</p>
+                <p>Phone: +91 97887 42627</p>
+                <div class="social-icons">
+                    <a href="#" class="magnetic" data-strength="20">IG</a>
+                    <a href="#" class="magnetic" data-strength="20">FB</a>
+                    <a href="#" class="magnetic" data-strength="20">WA</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vanakam Vandhanam Events. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Stylist Modal -->
+    <div class="modal-overlay" id="stylistModal">
+        <div class="modal-content">
+            <button class="close-modal magnetic" data-strength="15">&times;</button>
+            <div class="modal-header">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--accent-gold)"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
+                <h3>Smart AI Stylist</h3>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <p class="italic">Describe your dream event, and let our AI suggest concepts.</p>
+                <div class="input-group">
+                    <label>Event Type</label>
+                    <input type="text" id="aiEvent" placeholder="e.g. Traditional Outdoor Wedding">
+                </div>
+                <div class="input-group">
+                    <label>Palette & Vibe</label>
+                    <input type="text" id="aiPalette" placeholder="e.g. Royal Maroon & Gold">
+                </div>
+                <button class="btn-primary w-full magnetic" data-strength="20" id="generateBtn">Generate Magic</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919788742627" target="_blank" class="floating-wa magnetic" data-strength="30">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="./script.js"></script>
+</body>
+</html>
